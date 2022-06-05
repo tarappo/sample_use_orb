@@ -9,7 +9,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - tarappo/orb_sample@0.0.2
+      - orb_sample
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
