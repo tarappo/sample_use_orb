@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  orb_sample: tarappo/orb_sample@0.0.2
+  orb_sample: tarappo/orb_sample@0.0.3
 
 jobs:
   say-hello:
@@ -9,6 +9,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
+      - orb_sample/sample_command
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
@@ -17,4 +18,3 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-      - orb_sample/sample
