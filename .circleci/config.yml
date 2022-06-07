@@ -9,6 +9,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
+      - orb_sample/sample
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
