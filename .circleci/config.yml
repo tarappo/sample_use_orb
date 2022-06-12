@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   orb_sample: tarappo/orb_sample@0.0.3
+  sample_two: tarappo/sample_two@0.0.1
 
 jobs:
   say-hello:
@@ -10,6 +11,7 @@ jobs:
     steps:
       - checkout
       - orb_sample/sample_command
+      - sample_two/sample_two
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
