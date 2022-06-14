@@ -11,7 +11,8 @@ jobs:
     steps:
       - checkout
       - orb_sample/sample_command
-      - sample_two/sample_two
+      - sample_two/sample_command_two:
+          sample_key_value: "sample command two"
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
