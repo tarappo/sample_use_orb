@@ -1,8 +1,7 @@
 version: 2.1
 
 orbs:
-  orb_sample: tarappo/orb_sample@0.0.3
-  sample_two: tarappo/sample_two@0.0.2
+  sample: tarappo/sample@0.0.1
 
 jobs:
   say-hello:
@@ -11,11 +10,8 @@ jobs:
     steps:
       - checkout
       - orb_sample/sample_command
-      - sample_two/sample_command_two:
-          sample_key_value: "sample command two"
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+      - sample/sample:
+          sample_key_value: "sample command!!!!"
 
 workflows:
   say-hello-workflow:
