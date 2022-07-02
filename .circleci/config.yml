@@ -9,7 +9,6 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - orb_sample/sample_command
       - sample/sample:
           sample_key_value: "sample command!!!!"
 
